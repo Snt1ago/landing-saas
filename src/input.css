@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+/* Preline UI */
+@import "../node_modules/preline/variants.css";
+/* Plugins */
+@plugin "@tailwindcss/forms";
+
+@theme {
+  --font-inter: "Inter", "sans-serif";
+
+  --color-blue-ribbon-50: #eff4ff;
+  --color-blue-ribbon-100: #dbe6fe;
+  --color-blue-ribbon-200: #bfd3fe;
+  --color-blue-ribbon-300: #93b4fd;
+  --color-blue-ribbon-400: #6090fa;
+  --color-blue-ribbon-500: #3b76f6;
+  --color-blue-ribbon-600: #2563eb;
+  --color-blue-ribbon-700: #1d58d8;
+  --color-blue-ribbon-800: #1e4baf;
+  --color-blue-ribbon-900: #1e408a;
+  --color-blue-ribbon-950: #172a54;
+
+  --color-east-bay-50: #f3f6fb;
+  --color-east-bay-100: #e3ebf6;
+  --color-east-bay-200: #cdddf0;
+  --color-east-bay-300: #abc6e5;
+  --color-east-bay-400: #83a9d7;
+  --color-east-bay-500: #668ccb;
+  --color-east-bay-600: #5274be;
+  --color-east-bay-700: #4862ad;
+  --color-east-bay-800: #3f528e;
+  --color-east-bay-900: #3a4a78;
+  --color-east-bay-950: #252d46;
+
+  --color-white-50: #ffffff;
+  --color-white-100: #efefef;
+  --color-white-200: #dcdcdc;
+  --color-white-300: #bdbdbd;
+  --color-white-400: #989898;
+  --color-white-500: #7c7c7c;
+  --color-white-600: #656565;
+  --color-white-700: #525252;
+  --color-white-800: #464646;
+  --color-white-900: #3d3d3d;
+  --color-white-950: #292929;
+}
+
+/* Adds pointer cursor to buttons */
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* Defaults hover styles on all devices */
+@custom-variant hover (&:hover);

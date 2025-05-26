@@ -9,7 +9,7 @@
     />
     <meta
       name="keywords"
-      content="FlowMetrics, productividad, equipo remoto, análisis en tiempo real, colaboración"
+      content="startup SaaS, FlowMetrics, productividad, equipo remoto, análisis en tiempo real, colaboración"
     />
     <!-- Cambiar rutas relativas a rutas absolutas o relativas al proyecto -->
     <!-- output.css -->
@@ -17,6 +17,27 @@
     <meta name="author" content="FlowMetrics" />
     <title>FlowMetrics - Optimiza la Productividad</title>
     <link href="src/output.css" rel="stylesheet" />
+<!-- En el <head> de la versión en español -->
+<link rel="alternate" hreflang="es" href="https://startupx.com/es" />
+<!-- Versión en inglés -->
+<link rel="alternate" hreflang="en" href="https://startupx.com/en" />    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "StartupX",
+        "url": "https://startupx.com",
+        "image": "url-logo.png",
+        "telephone": "+52-55-1234-5678",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Reforma 123",
+          "addressLocality": "Ciudad de México",
+          "addressRegion": "CDMX",
+          "postalCode": "06600"
+        },
+        "priceRange": "$$"
+      }
+    </script>
   </head>
   <body class="font-inter">
     <!-- ========== HEADER ========== -->
@@ -314,7 +335,7 @@
           <img
             class="w-full rounded-md"
             src="src/img/Collaborative Brainstorming Session (1).svg"
-            alt="Hero Image"
+            alt="Dashboard de FlowMetrics para gestión de proyectos"
           />
           <div
             class="absolute inset-0 -z-1 bg-linear-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6 dark:from-neutral-800 dark:via-neutral-900/0 dark:to-neutral-900/0"
@@ -1841,26 +1862,30 @@
                 Manténgase actualizado
               </h4>
 
-              <form>
+              <form name="subscribe" netlify>
                 <div
                   class="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-3 bg-white rounded-lg p-2 dark:bg-neutral-900"
                 >
                   <div class="w-full">
-                    <label for="hero-input" class="sr-only">Subscribete</label>
+                    <label for="email" class="sr-only">Suscribete</label>
                     <input
-                      type="text"
-                      id="hero-input"
-                      name="hero-input"
+                      type="email"
+                      name="email"
                       class="py-2.5 sm:py-3 px-4 block w-full border-transparent rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
                       placeholder="Inresa tu email"
                     />
                   </div>
-                  <a
-                    class="w-full sm:w-auto whitespace-nowrap p-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+
+                  <script src="https://www.google.com/recaptcha/api.js"></script>
+                  <button
+                    class="g-recaptcha transition hover:scale-105 duration-300 w-full sm:w-auto whitespace-nowrap p-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                     href="#"
+                    data-sitekey="6LcMLUorAAAAAHsFFn9cRn--BjNUH7YsGVHwiZpg"
+                    data-callback="onSubmit"
+                    data-action="submit"
                   >
                     Subscribe
-                  </a>
+                  </button>
                 </div>
                 <p class="mt-3 text-sm text-gray-400">
                   Únete a nuestro boletín para mantenerte al día con funciones y
@@ -2051,7 +2076,6 @@
       </div>
     </footer>
     <!-- ========== END FOOTER ========== -->
-
     <script src="node_modules/preline/dist/preline.js"></script>
   </body>
 </html>

@@ -1,0 +1,11 @@
+backend:
+  name: github
+  repo: Snt1ago/landing-saas
+media_folder: "static/img"
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/posts"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
